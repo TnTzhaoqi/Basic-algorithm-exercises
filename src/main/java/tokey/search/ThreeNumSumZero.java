@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ThreeNumSumZero {
     public static List<List<Integer>> threeSum(int[] nums) {
-        Arrays.sort(nums);
+        Arrays.sort(nums);;
 //咋回事啊
         List<List<Integer>> list2 = new ArrayList<List<Integer>>();
         int first = 0;
