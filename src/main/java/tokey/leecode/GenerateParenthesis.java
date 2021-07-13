@@ -21,6 +21,7 @@ public class GenerateParenthesis {
         if(n==1){
             String str = "()";
             list.add(str);
+            list.add
 
         }else {
             List list2 = generateParenthesis(n-1);
