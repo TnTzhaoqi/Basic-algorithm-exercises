@@ -17,6 +17,7 @@ public class BinarySearch {
         StringBuilder sb = new StringBuilder();
         char ch = 'a';
         char ch2 = 'w';
+        char ch3 = 's';;
 
 
 
