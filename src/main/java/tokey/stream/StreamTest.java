@@ -39,7 +39,7 @@ public class StreamTest {
         Stream<User> stream2 = Arrays.stream(users);
 
         //3.通过Stream类中的静态方法of()
-        Stream<String> stream3 = Stream.of("aa","bb","cc");
+        Stream<String> stream3 = Stream.of("aa","bb","cc","dd");
 
         //4.创建无限流
         Stream<Integer> stream4 = Stream.iterate(0, (x) -> x + 2);
@@ -49,11 +49,12 @@ public class StreamTest {
 
 
     List<User> users = Arrays.asList(
-            new User("gc1", 24, 7500, Status.BUSY),
+            new User("gc1", 22, 7500, Status.BUSY),
             new User("gc2", 25, 13000, Status.FREE),
-            new User("gc3", 26, 20000, Status.VOCATION),
-            new User("gc4", 23, 2000, Status.BUSY),
+            new User("gc3", 23, 20000, Status.VOCATION),
+            new User("gc4", 26, 2000, Status.BUSY),
             new User("gc5", 22, 0, Status.FREE));
+            new User("gc9", 23, 0, Status.FREE)); //new user
     /*
      * 中间操作：(1.返回结果依然是流  2.中间操作是延迟的，遇到终结操作才会触发执行  3.中间操作是流水线形式的)
      *     筛选与切片
