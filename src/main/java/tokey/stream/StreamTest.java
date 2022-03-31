@@ -2,13 +2,7 @@ package tokey.stream;
 
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -232,7 +226,7 @@ public class StreamTest {
                 .collect(Collectors.toList());
         list.forEach(System.out::println);
 
-        //这里是转换为set
+        //这里是转换为set，这里的set
         users.stream().map(User::getName).collect(Collectors.toSet());
         //把list转为其它的数据结构，这里是hashset
         HashSet<String> hashSet = users.stream().map(User::getName).
@@ -240,7 +234,7 @@ public class StreamTest {
 
         Long count = users.stream().collect(Collectors.counting());
         Double avgAge = users.stream().collect(Collectors.averagingInt(User::getAge));
-
+        
         //按条件分组
         Map<String, List<User>> map = users.stream().collect(Collectors.groupingBy(User::getStatus));
         System.out.println("collectors分组功能， map:"+map);
@@ -258,5 +252,23 @@ public class StreamTest {
         //按条件分区,true放在一组，false放在另一组
         Map<Boolean, List<User>> collect2 = users.stream().collect(Collectors.partitioningBy((u) -> u.getAge() > 24));
         System.out.println(collect2);
+    }
+
+//    @Test
+//    public void testArrayStream(){
+//         int [] intArray = {1,2,4,1,3,455,21,4,1,2,24,56,4,21,53,32,1};
+//         String[] strArray = {"q","wqwq","q","strubg", "abc","wqw"};
+//         IntStream stream =  Arrays.stream(intArray);
+//         ArrayList<Integer> list = stream.distinct().collect(Collectors.toCollection(ArrayList::new));
+//
+//
+//
+//    }
+    @Test
+    public void testArrayList(){
+        ArrayList <Integer> list = new ArrayList<>();
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+
     }
 }
