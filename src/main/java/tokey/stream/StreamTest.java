@@ -47,7 +47,7 @@ public class StreamTest {
             new User("gc2", 25, 13000, Status.FREE),
             new User("gc3", 23, 20000, Status.VOCATION),
             new User("gc4", 26, 2000, Status.BUSY),
-            new User("gc5", 22, 0, Status.FREE));
+            new User("gc5", 22, 0, Status.FREE),
             new User("gc9", 23, 0, Status.FREE)); //new user
     /*
      * 中间操作：(1.返回结果依然是流  2.中间操作是延迟的，遇到终结操作才会触发执行  3.中间操作是流水线形式的)
